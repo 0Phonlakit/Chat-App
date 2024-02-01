@@ -1,0 +1,271 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    transition: background 0.2s linear;
+}
+
+/* App Position */
+
+.app {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    border-left: 1px solid #eee;
+}
+
+.app > .screen {
+    display: none;
+}
+
+.app > .screen.active {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.screen .from {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+}
+
+.screen .from.input {
+    width: 100%;
+    margin: 20px 0px;
+}
+
+/* Username screen */
+
+.screen h2{
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #111;
+    border-bottom: 4px solid #555;
+    padding: 5px 0px;
+    display: inline-block;
+}
+
+.screen .from-input label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.screen .from-input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    font-size: 16px;
+}
+
+.screen .from-input button {
+    padding: 10px 20px;
+    background: #111;
+    color: #eee;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    margin-top: 16px;
+}
+
+/* Chat screen */
+
+/* Header bar */
+.chat-screen .header {
+    background: #111;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.chat-screen .header .logo {
+    font-size: 18px;
+    color: #eee;
+    font-weight: 600;
+}
+
+.chat-screen .header button {
+    padding: 5px 10px;
+    border: 1px solid #eee;
+    background: transparent;
+    color: #eee;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+}
+
+.chat-screen .messages {
+    width: 100%;
+    height: calc(100% - 100px);
+    background: #f5f5f5;
+    overflow: auto;
+}
+
+.chat-screen .messages .message {
+    display: flex;
+    padding: 10px;
+}
+
+.chat-screen .messages .message > div {
+    max-width: 300px;
+    background: #fff;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+}
+
+/* Main Content  */
+.chat-screen .messages .my-message {
+    justify-content: flex-end;
+}
+
+.chat-screen .messages .other-message {
+    justify-content: flex-start;
+}
+
+.chat-screen .messages .message .name {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.chat-screen .messages .message .text {
+    word-wrap: break-word;
+}
+
+.chat-screen .messages .update {
+    text-align: center;
+    padding: 10px;
+    font-style: italic;
+}
+
+/* Bottom bar */
+.chat-screen .typebox {
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+
+.chat-screen .typebox input {
+    flex: 1;
+    height: 50px;
+    font-size: 18px; 
+}
+
+.chat-screen .typebox button {
+    width: 80px;
+    height: 100%;
+    background: #111;
+    color: #eee;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Light/Dark Theme Body*/
+body.dark {
+	background: #292C35;
+}
+
+body.dark .header {
+    background: #f5f5f5;
+}
+
+body.dark .header .logo{
+    color: #111;
+}
+
+body.dark .header button {
+    border: 1px solid #111;
+    color: #111;
+}
+
+body.dark .chat-screen .messages {
+    background: #292C35;
+}
+
+body.dark .chat-screen .messages .message > div {
+    background: #292C35;
+    border: 1px solid #eee;
+    color: #fff;
+}
+
+body.dark .chat-screen .messages .message .name {
+    color: #fff;
+}   
+
+body.dark .chat-screen .typebox button {
+    color: #111;
+    background: #eee;
+}
+
+body.dark .chat-screen .typebox input {
+    background: #eee;
+}
+
+body.dark .chat-screen .messages .update {
+    color: #eee;
+}
+
+/* Light/Dark Theme Toggle */
+.chat-screen .header .toggle-mode {
+    margin-left: 50%;
+}
+
+.chat-screen .header .toggle-mode .checkbox {
+        opacity: 0;
+        position: absolute;
+}
+
+.chat-screen .header .toggle-mode .label {
+	background-color: #555;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 26px;
+	width: 50px;
+	transform: scale(1.5);
+}
+
+.chat-screen .header .toggle-mode .label .ball {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.chat-screen .header .toggle-mode .checkbox:checked + .label .ball {
+	transform: translateX(24px);
+}
+
+.chat-screen .header .toggle-mode .fa-moon {
+	color: #f1c40f;
+}
+
+.chat-screen .header .toggle-mode .fa-sun {
+	color: #f39c12;
+}
