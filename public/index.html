@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a1a0aee510.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Chat app</title>
 </head>
@@ -14,7 +17,7 @@
                 <h2> Join Chatroom</h2>
                 <div class="from-input">
                     <label > Username </label>
-                    <input type="text" id="username">
+                    <input type="text" id="username" placeholder="Enter You Name">
                 </div>
                 <div class="from-input">
                     <button id="join-user"> Join </button>
@@ -23,7 +26,7 @@
         </div>
         <div class="screen chat-screen ">
             <div class="header">
-                <div class="logo"> Chat room </div>
+                <div class="logo"> <i class="fa-solid fa-comments"></i>  Chat room </div>
                 <div class="toggle-mode"> 
                     <input type="checkbox" class="checkbox" id="chk" />
                     <label class="label" for="chk">
@@ -37,7 +40,7 @@
             <div class="messages">
             </div>
             <div class="typebox">
-                <input type="text" id="message-input">
+                <input type="text" id="message-input" >
                 <button id="send-message"> Send </button>
             </div>
         </div>

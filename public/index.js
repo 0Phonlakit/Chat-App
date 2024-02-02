@@ -7,7 +7,14 @@
     console.log(uname);
 
     // Change Page 
-    app.querySelector(".join-screen #join-user").addEventListener("click", function(){
+    app.querySelector(".join-screen #username").addEventListener("keypress", function(event){
+        if (event.key === 'Enter') {
+            userName();
+        }
+    });
+
+    app.querySelector(".join-screen #join-user").addEventListener("click", userName)
+    function userName(){
         let username = app.querySelector(".join-screen #username").value;
         if (username.length == 0 ) {
             return ;
@@ -17,10 +24,17 @@
         uname = username;
         app.querySelector(".join-screen").classList.remove("active");
         app.querySelector(".chat-screen").classList.add("active")
-    });
+    };
 
     // Store text and username when chat
-    app.querySelector(".chat-screen #send-message").addEventListener("click", function(){
+    app.querySelector(".chat-screen #message-input").addEventListener("keypress", function(event){
+        if (event.key === 'Enter') {
+            sendMessage();
+        }
+    });
+
+    app.querySelector(".chat-screen #send-message").addEventListener("click", sendMessage);
+    function sendMessage(){
         let message =app.querySelector(".chat-screen #message-input").value;
         if (message.length == 0) {
             return ;
@@ -37,7 +51,7 @@
         });
 
         app.querySelector(".chat-screen #message-input").value = "";
-    });
+    };
 
     // Return to local Page
     app.querySelector(".chat-screen #exit-chat").addEventListener("click", function() {
