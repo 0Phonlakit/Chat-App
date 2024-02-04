@@ -1,7 +1,7 @@
 # Chat App
 
 ## Try Damo
-You can try out the website at this link : **https://chat-app-iv5d.onrender.com/**
+**You can try out the website at this link : https://chat-app-iv5d.onrender.com/**
 
 ## About the website
 This website is a learning project that demonstrates the use of Javascript in conjunction with socket.io. The website focuses on real-time communication between the server and client, allowing for real-time data transmission and reception.
