@@ -34,7 +34,7 @@ Join Chat Page : This is the first page that users see. It allows them to enter 
 ![user2joinchat](gif/user2joinchat.gif)
 <hr />
 
-When User 2 enters the chat room, User 1's screen will display a notification indicating that User 2 has joined the chat room.
+When **User 2** enters the chat room, User 1's screen will display a notification indicating that User 2 has joined the chat room.
 ![user1checkpersonjoin](gif/user1checkpersonjoin.gif)
 <hr />
 
