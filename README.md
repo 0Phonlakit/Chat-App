@@ -38,7 +38,7 @@ When **User 2** enters the chat room, **User 1's** screen will display a notific
 ![user1checkpersonjoin](gif/user1checkpersonjoin.gif)
 <hr />
 
-After joining the chat room, **User 1** can chat with User 2.
+After joining the chat room, **User 1** can chat with **User 2**.
 ![user1chating](gif/user1chating.gif)
 <hr />
 
