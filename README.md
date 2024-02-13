@@ -42,7 +42,7 @@ After joining the chat room, **User 1** can chat with **User 2**.
 ![user1chating](gif/user1chating.gif)
 <hr />
 
-User 2 can also see User 1's messages and can chat with User 1.
+**User 2** can also see User 1's messages and can chat with User 1.
 ![user2chating](gif/user2chating.gif)
 <hr />
 
